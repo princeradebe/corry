@@ -15,12 +15,13 @@ numberOfDeaths.innerHTML = `Deaths: ${deaths}`;
 
 const getCovidSA = async country => {
     try {
-        const fetchCovid19SA = await fetch(`https://covid19.mathdro.id/api/countries/${country}`)
+        // const fetchCovid19SA = await fetch(`https://covid19.mathdro.id/api/countries/${country}`)
+        const fetchCovid19SA = await fetch(`https://corona.lmao.ninja/countries/${country}`);
         const data = await fetchCovid19SA.json();
-        numberOfConfirmed.innerHTML = `Confirmed: ${data.confirmed.value}`;
+        numberOfConfirmed.innerHTML = `Confirmed: ${data.cases}`;
         // numberOfActive.innerHTML = `Active: ${data.active.value}`;
-        numberOfRecovered.innerHTML = `Recovered: ${data.recovered.value}`;
-        numberOfDeaths.innerHTML = `Deaths: ${data.deaths.value}`;
+        numberOfRecovered.innerHTML = `Recovered: ${data.recovered}`;
+        numberOfDeaths.innerHTML = `Deaths: ${data.deaths}`;
         return data;
     } catch(err) {
         console.log(err);
