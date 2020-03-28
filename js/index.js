@@ -1,9 +1,3 @@
-let confirmed = "loading...";
-let deaths = "loading...";
-let recovered = "loading...";
-let critical = "loading...";
-let active = "loading...";
-let updatef = "loading...";
 
 let numberOfConfirmed = document.getElementById("confirmed");
 let numberOfDeaths = document.getElementById("deaths");
@@ -11,12 +5,6 @@ let numberOfRecovered = document.getElementById("recovered");
 let numberOfCritical = document.getElementById("critical");
 let numberOfActive = document.getElementById('active');
 let updatedOn = document.getElementById('updated')
-
-numberOfConfirmed.innerHTML = `${confirmed}`;
-numberOfRecovered.innerHTML = `${recovered}`;
-numberOfDeaths.innerHTML = `${deaths}`;
-numberOfCritical.innerHTML = `${critical}`;
-numberOfActive.innerHTML = `${active}`;
 
 const getCovidSA = async country => {
     try {
@@ -45,5 +33,10 @@ const getAll = async () => {
         console.log(err);
     }
 }
-getCovidSA("South Africa");
+data = getCovidSA("South Africa");
+
 getAll();
+
+// const drawSlider = () => {
+//     let 
+// }
