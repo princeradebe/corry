@@ -117,6 +117,26 @@ ul {
   background: #FFFFFF;
   border-radius: 10rem;
 }
+.fill {
+  height: .7rem;
+  border-radius: 10rem;
+}
+.fill.active {
+  width: 0rem;
+  background: #FF7B37;
+}
+.fill.recovered {
+  width: 0rem;
+  background: #0DC43E;
+}
+.fill.critical {
+  width: 0rem;
+  background: #C40F0D;
+}
+.fill.deaths {
+  width: 0rem;
+  background: #000000;
+}
 
 .spinner {
   border: 1px solid #f3f3f3;

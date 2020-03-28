@@ -4,7 +4,10 @@ let numberOfDeaths = document.getElementById("deaths");
 let numberOfRecovered = document.getElementById("recovered");
 let numberOfCritical = document.getElementById("critical");
 let numberOfActive = document.getElementById('active');
-let updatedOn = document.getElementById('updated');
+let updatedOn = document.getElementById("updated");
+let slider = document.querySelector(".count-slider");
+let sliderWidth = getComputedStyle(slider);
+let width = parseInt(sliderWidth.width);
 
 const getCovidSA = async country => {
     try {
@@ -17,15 +20,24 @@ const getCovidSA = async country => {
 
         numberOfCritical.classList.remove("spinner");
         numberOfCritical.innerHTML = `${data.critical}`;
+        let fillCritical = (parseInt(data.critical)/parseInt(data.cases)) * width;
+        document.getElementById("fill-critical").style.width = (fillCritical / 10).toFixed(1) + "rem";
 
         numberOfRecovered.classList.remove("spinner");
         numberOfRecovered.innerHTML = `${data.recovered}`;
+        let fillRecovered = (parseInt(data.recovered)/parseInt(data.cases)) * width;
+        document.getElementById("fill-recovered").style.width = (fillRecovered / 10).toFixed(1) + "rem";
 
         numberOfDeaths.classList.remove("spinner");
         numberOfDeaths.innerHTML = `${data.deaths}`;
+        let fillDeaths = (parseInt(data.deaths)/parseInt(data.cases)) * width;
+        document.getElementById("fill-deaths").style.width = (fillDeaths / 10).toFixed(1) + "rem";
 
         numberOfActive.classList.remove("spinner");
         numberOfActive.innerHTML =`${data.active}`;
+        let fillActive = (parseInt(data.active)/parseInt(data.cases)) * width;
+        document.getElementById("fill-active").style.width = (fillActive / 10).toFixed(1) + "rem";
+
         return data;
     } catch(err) {
         console.log(err);
@@ -47,6 +59,4 @@ data = getCovidSA("South Africa");
 
 getAll();
 
-// const drawSlider = () => {
-//     let 
-// }
+
