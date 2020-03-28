@@ -21,47 +21,59 @@
         <main>
             <div class="wrapper">
                 <div class="country-wrapper">
-                    <img src="/corry/assets/sa_flag.svg" alt="">
-                    <h1>South Africa</h1>
-                    <span>Last Updated:</span>
+                    <img src="/corry/assets/sa_flag.svg" alt="South Africa">
+                    <div class="country-name">
+                        <h1>South Africa</h1>
+                        <span id="updated">""</span>
+                    </div>
                 </div>
                 <div class="inner-wrapper">
                     <div class="cases-wrapper">
                         <ul class="cases__list">
-                            <li class="cases__list--item">
+                            <li class="cases__list--item confirmed">
                                 <img src="/corry/assets/confirmed.svg" alt="confirmed">
-                                <span>Confirmed</span>
-                                <strong id="confirmed">0</strong>
-                                <div class="count-slider confirmed"></div>
+                                <div class="stats">
+                                    <span>Confirmed</span>
+                                    <strong id="confirmed">0</strong>
+                                    <div class="count-slider confirmed"></div>
+                                </div>
                             </li>
-                            <li class="cases__list--item">
+                            <li class="cases__list--item active">
                                 <img src="/corry/assets/active.svg" alt="active">
-                                <span>Active</span>
-                                <strong id="active">0</strong>
-                                <div class="count-slider active"></div>
+                                <div class="stats">
+                                    <span>Active</span>
+                                    <strong id="active">0</strong>
+                                    <div class="count-slider active"></div>
+                                </div>
                             </li>
-                            <li class="cases__list--item">
+                            <li class="cases__list--item recovered">
                                 <img src="/corry/assets/recovered.svg" alt="recovered">
-                                <span>Recovered</span>
-                                <strong id="recovered">0</strong>
-                                <div class="count-slider recovered"></div>
+                                <div class="stats">
+                                    <span>Recovered</span>
+                                    <strong id="recovered">0</strong>
+                                    <div class="count-slider recovered"></div>
+                                </div>
                             </li>
-                            <li class="cases__list--item">
+                            <li class="cases__list--item critical">
                                 <img src="/corry/assets/critical.svg" alt="critical">
-                                <span>Critical</span>
-                                <strong id="critical">0</strong>
-                                <div class="count-slider critical"></div>
+                                <div class="stats">
+                                    <span>Critical</span>
+                                    <strong id="critical">0</strong>
+                                    <div class="count-slider critical"></div>
+                                </div>
                             </li>
-                            <li class="cases__list--item">
+                            <li class="cases__list--item deaths">
                                 <img src="/corry/assets/deaths.svg" alt="deaths">
-                                <span>Deaths</span>
-                                <strong id="deaths">0</strong>
-                                <div class="count-slider deaths"></div>
+                                <div class="stats">
+                                    <span>Deaths</span>
+                                    <strong id="deaths">0</strong>
+                                    <div class="count-slider deaths"></div>
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <div class="corona-img">
-                        <img src="/corry/assets/corona.png" alt="">
+                        <img src="/corry/assets/corona.png" alt="corona image">
                     </div>
                 </div>
             </div>
@@ -72,5 +84,6 @@
             </div>
         </footer>
         <script src="./js/index.js" async defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     </body>
 </html>

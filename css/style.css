@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Patua+One&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900&display=swap');
 
 /* RESET */
 *,
@@ -11,61 +11,109 @@
 
 html {
   height: 100%;
-  font-family: "Patua One", cursive;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
 }
 
 body {
   width: 100%;
   height: 100vh;
+  background: #E7EBF4;
   display: flex;
   flex-direction: column;
-}
-
-header h1 {
-  display: flex;
-  width: 100%;
-  height: 10rem;
-  /* background-color: green; */
   justify-content: center;
   align-items: center;
-  color: dimgrey;
 }
 
-section {
-  width: 100%;
-  height: 30vh;
+a {
+  color: #2F3340;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: relative;
+  width: 29.7rem;
+}
+
+.country-wrapper  {
+  display: flex;
+  position: absolute;
+  top: -7rem;
+}
+.country-wrapper img {
+  width: 5.4rem;
+  height: 5.4rem;
+  margin-right: 1rem;
+}
+.country-wrapper span {
+  color: #AEAEAE;
+}
+.cases-wrapper {
+  width: 29.7rem;
+  height: auto;
+  padding-bottom: 2rem;
+  background: #FFFFFF;
+  border-radius: 2rem;
+  margin: 5rem auto 2rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 5rem;
-  color: white;
+
 }
 
+.cases-wrapper img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.cases__list--item {
+  width: 24.7rem;
+  height: 7.7rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: large;
+  color: #2F3340;
+  position: relative;
+}
 .confirmed {
-  background: #f59338;
+  background: #FFFFFF;
 }
-
+.active {
+  background: #FBDDB1;
+}
 .recovered {
-  background: #52be34;
+  background: #C7FBB1;
 }
-
+.critical {
+  background: #FBB1B1;
+}
 .deaths {
-  background: #ee5e43;
+  background: #474747;
+  color: #FFFFFF;
 }
-
-footer {
+.corona-img {
+  display: none;
+}
+.stats {
   display: flex;
-  justify-content: center;
-  font-size: 1.2rem;
-  color: darkgray;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 1.4rem;
 }
 
-@media only screen and (max-width: 600px) {
-  section {
-    font-size: 2.5rem;
-  }
-  footer {
-      font-size: 1rem;
-  }
+.count-slider {
+  /* position: absolute;
+  right: 1.4rem;
+  top: 1rem; */
+  width: 14.8rem;
+  height: .7rem;
+  background: #FFFFFF;
+  border-radius: 10rem;
 }
