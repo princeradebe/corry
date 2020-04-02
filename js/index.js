@@ -1,17 +1,17 @@
-
-let numberOfConfirmed = document.getElementById("confirmed");
-let numberOfDeaths = document.getElementById("deaths");
-let numberOfRecovered = document.getElementById("recovered");
-let numberOfCritical = document.getElementById("critical");
-let numberOfActive = document.getElementById('active');
-let updatedOn = document.getElementById("updated");
-let slider = document.querySelector(".count-slider");
-let sliderWidth = getComputedStyle(slider);
-let width = parseInt(sliderWidth.width);
+document.addEventListener("DOMContentLoaded", function() {
+const numberOfConfirmed = document.getElementById("confirmed");
+const numberOfDeaths = document.getElementById("deaths");
+const numberOfRecovered = document.getElementById("recovered");
+const numberOfCritical = document.getElementById("critical");
+const numberOfActive = document.getElementById('active');
+const updatedOn = document.getElementById("updated");
+const slider = document.querySelector(".count-slider");
+const sliderWidth = getComputedStyle(slider);
+const width = parseInt(sliderWidth.width);
 
 const getCovidSA = async country => {
     try {
-        // const fetchCovid19SA = await fetch(`https://covid19.mathdro.id/api/countries/${country}`)
+        // const fetchCovid19SA = await fetch(`https://covid19.mathdro.id/api/countries/${country}`) - Old API
         const fetchCovid19SA = await fetch(`https://corona.lmao.ninja/countries/${country}`);
         const data = await fetchCovid19SA.json();
 
@@ -55,8 +55,8 @@ const getAll = async () => {
         console.log(err);
     }
 }
-data = getCovidSA("South Africa");
 
+data = getCovidSA("South Africa");
 getAll();
 
-
+});

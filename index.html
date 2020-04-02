@@ -9,7 +9,7 @@
         <title>Corry SA</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -21,9 +21,9 @@
         <main>
             <div class="wrapper">
                 <div class="country-wrapper">
-                    <img src="/corry/assets/sa_flag.svg" alt="South Africa">
+                    <img id="country" src="assets/sa_flag.svg" alt="South Africa">
                     <div class="country-name">
-                        <h1>South Africa</h1>
+                        <h1 id="where">South Africa</h1>
                         <span id="updated">""</span>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                     <div class="cases-wrapper">
                         <ul class="cases__list">
                             <li class="cases__list--item confirmed">
-                                <img src="/corry/assets/confirmed.svg" alt="confirmed">
+                                <img src="assets/confirmed.svg" alt="confirmed">
                                 <div class="stats">
                                     <span>Confirmed</span>
                                     <strong class="spinner" id="confirmed"></strong>
@@ -41,7 +41,7 @@
                                 </div>
                             </li>
                             <li class="cases__list--item active">
-                                <img src="/corry/assets/active.svg" alt="active">
+                                <img src="assets/active.svg" alt="active">
                                 <div class="stats">
                                     <span>Active</span>
                                     <strong class="spinner" id="active"></strong>
@@ -51,7 +51,7 @@
                                 </div>
                             </li>
                             <li class="cases__list--item recovered">
-                                <img src="/corry/assets/recovered.svg" alt="recovered">
+                                <img src="assets/recovered.svg" alt="recovered">
                                 <div class="stats">
                                     <span>Recovered</span>
                                     <strong class="spinner" id="recovered"></strong>
@@ -61,7 +61,7 @@
                                 </div>
                             </li>
                             <li class="cases__list--item critical">
-                                <img src="/corry/assets/critical.svg" alt="critical">
+                                <img src="assets/critical.svg" alt="critical">
                                 <div class="stats">
                                     <span>Critical</span>
                                     <strong class="spinner" id="critical"></strong>
@@ -71,7 +71,7 @@
                                 </div>
                             </li>
                             <li class="cases__list--item deaths">
-                                <img src="/corry/assets/deaths.svg" alt="deaths">
+                                <img src="assets/deaths.svg" alt="deaths">
                                 <div class="stats">
                                     <span>Deaths</span>
                                     <strong class="spinner" id="deaths"></strong>
@@ -83,7 +83,7 @@
                         </ul>
                     </div>
                     <div class="corona-img">
-                        <img src="/corry/assets/corona.png" alt="corona image">
+                        <img src="assets/corona.png" alt="corona image">
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                 <p>&copy; 2020 princeradebe.co.za | Data API provided by <a href="https://github.com/novelcovid/api">NovelCOVID</a></p>
             </div>
         </footer>
-        <script src="./js/index.js" async defer></script>
+        <script src="js/index.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     </body>
 </html>
