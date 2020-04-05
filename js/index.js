@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+
 const numberOfConfirmed = document.getElementById("confirmed");
 const numberOfDeaths = document.getElementById("deaths");
 const numberOfRecovered = document.getElementById("recovered");
@@ -9,8 +10,6 @@ const spinner = document.querySelectorAll(".spinner");
 const slider = document.querySelector(".count-slider");
 const sliderWidth = getComputedStyle(slider);
 const width = parseInt(sliderWidth.width);
-
-
 
 const getCovidSA = async country => {
     try {
@@ -41,27 +40,11 @@ const getCovidSA = async country => {
         let fillActive = (parseInt(data.active)/parseInt(data.cases)) * width;
         document.getElementById("fill-active").style.width = (fillActive / 10).toFixed(1) + "rem";
 
-<<<<<<< HEAD
-        return data;
-    } catch(err) {
-        console.log(err);
-    }
-}
-
-//Get the time when the API was last updated
-const getAll = async () => {
-    try {
-        const fetchCovidAll = await fetch("https://corona.lmao.ninja/all");
-        const data = await fetchCovidAll.json();
         time = moment(data.updated).format("DD-MM-YYYY h:mm:ss a");
         updatedOn.innerHTML = `<strong>Last Updated:</strong> ${time}`;
-=======
-        //Time stats were updated
-        let time = moment(data.updated).format("DD MMMM YYYY h:mm:ss");
-        updatedOn.innerHTML = `Last Updated: ${time}`;
 
         return data;
->>>>>>> 955ccea6bff5c02640371bb2e8d7c8d4e3f9084e
+
     } catch(err) {
         console.log(err);
     }
