@@ -49,8 +49,8 @@ const getAll = async () => {
     try {
         const fetchCovidAll = await fetch("https://corona.lmao.ninja/all");
         const data = await fetchCovidAll.json();
-        time = moment(data.updated).format("DD-MM-YYYY h:mm:ss");
-        updatedOn.innerHTML = `Last Updated: ${time}`;
+        time = moment(data.updated).format("DD-MM-YYYY h:mm:ss a");
+        updatedOn.innerHTML = `<strong>Last Updated:</strong> ${time}`;
     } catch(err) {
         console.log(err);
     }
