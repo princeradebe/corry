@@ -18,7 +18,9 @@ html {
 body {
   width: 100%;
   height: 100vh;
-  background: #E7EBF4;
+  /* background: #E7EBF4;
+   */
+   background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,6 +50,7 @@ ul {
 .country-wrapper img {
   width: 5.4rem;
   height: 5.4rem;
+  border-radius: 50%;
   margin-right: 1rem;
 }
 .country-wrapper span {
@@ -62,7 +65,9 @@ ul {
   margin: 5rem auto 2rem;
   display: flex;
   justify-content: center;
-
+  /* background: #ffffff; */
+  box-shadow:  20px 20px 60px #d9d9d9, 
+  -20px -20px 60px #ffffff;
 }
 
 .cases-wrapper img {
