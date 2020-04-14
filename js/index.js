@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+const countryElement = document.getElementById("country-select");
 const numberOfConfirmed = document.getElementById("confirmed");
 const numberOfDeaths = document.getElementById("deaths");
 const numberOfRecovered = document.getElementById("recovered");
@@ -13,6 +14,10 @@ const spinner = document.querySelectorAll(".spinner");
 const slider = document.querySelector(".count-slider");
 const sliderWidth = getComputedStyle(slider);
 const width = parseInt(sliderWidth.width);
+
+let countryTitle = document.getElementById("where");
+let countryFlag = document.getElementById("country-flag");
+let countryName = "South Africa";
 
 const getCovidSA = async country => {
     try {
@@ -51,6 +56,8 @@ const getCovidSA = async country => {
         deathsToday.innerHTML = `${data.todayDeaths}`;
         tests.innerHTML = `<strong>Number of tests conducted: </strong>${data.tests}`;
 
+        setCountryInto(data.country, data.countryInfo.flag);
+
         return data;
 
     } catch(err) {
@@ -58,6 +65,20 @@ const getCovidSA = async country => {
     }
 }
 
-data = getCovidSA("South Africa");
+//Default Call
+getCovidSA(countryName);
 
+
+countryElement.onchange=function() {
+let countryElementValue = countryElement.options[countryElement.selectedIndex].value;
+countryName = countryElement.options[countryElement.selectedIndex].text;
+getCovidSA(countryName);
+} 
+
+function setCountryInto(country, flag) {
+    countryTitle.innerHTML = country;
+    countryFlag.src = flag;
+}
 });
+
+

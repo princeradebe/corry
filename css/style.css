@@ -41,7 +41,15 @@ ul {
   position: relative;
   width: 29.7rem;
 }
-
+#country-select {
+  color: #AEAEAE;
+  border-color: #AEAEAE;
+  width: 30rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+}
 .country-wrapper  {
   display: flex;
   position: absolute;
@@ -170,7 +178,11 @@ ul {
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
 }
-
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* Safari */
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
