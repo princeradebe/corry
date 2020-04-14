@@ -7,6 +7,8 @@ const numberOfCritical = document.getElementById("critical");
 const numberOfActive = document.getElementById('active');
 const updatedOn = document.getElementById("updated");
 const casesToday = document.getElementById("confirmed-today");
+const deathsToday = document.getElementById("deaths-today");
+const tests = document.getElementById("tests");
 const spinner = document.querySelectorAll(".spinner");
 const slider = document.querySelector(".count-slider");
 const sliderWidth = getComputedStyle(slider);
@@ -43,7 +45,11 @@ const getCovidSA = async country => {
 
         time = moment(data.updated).format("DD-MMMM-YYYY h:mm:ss a");
         updatedOn.innerHTML = `<strong>Last Updated:</strong> ${time}`;
-        casesToday.innerHTML = `<strong>Cases reported today: </strong> ${data.todayCases}`;
+
+
+        casesToday.innerHTML = `${data.todayCases}`;
+        deathsToday.innerHTML = `${data.todayDeaths}`;
+        tests.innerHTML = `<strong>Number of tests conducted: </strong>${data.tests}`;
 
         return data;
 

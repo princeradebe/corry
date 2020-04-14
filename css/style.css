@@ -69,17 +69,37 @@ ul {
   box-shadow:  20px 20px 60px #d9d9d9, 
   -20px -20px 60px #ffffff;
 }
-
 .cases-wrapper img {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
 }
-
+.today__case--wrapper {
+  width: 24.7rem;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.today__case {
+  display: flex;
+  flex-direction: column;
+}
+.today__case strong {
+  font-size: 1.6rem;
+}
+.today__case {
+  color: #AEAEAE;
+  width: 11rem;
+  padding: .8rem;
+  text-align: end;
+  border-radius: 1rem;
+  box-shadow:  2px 2px 6px #d9d9d9, 
+  -2px -2px 6px #ffffff;
+}
 .cases__list--item {
   width: 24.7rem;
-  height: 7.7rem;
-  border-radius: 2rem;
-  margin-top: 2rem;
+  height: 7rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -114,9 +134,6 @@ ul {
 }
 
 .count-slider {
-  /* position: absolute;
-  right: 1.4rem;
-  top: 1rem; */
   width: 14.8rem;
   height: .7rem;
   background: #FFFFFF;
