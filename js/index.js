@@ -71,8 +71,9 @@ getCovidSA(countryName);
 
 countryElement.onchange=function() {
 let countryElementValue = countryElement.options[countryElement.selectedIndex].value;
-countryName = countryElement.options[countryElement.selectedIndex].text;
-getCovidSA(countryName);
+// countryName = countryElement.options[countryElement.selectedIndex].text;
+// console.log(countryElementValue);
+getCovidSA(countryElementValue);
 } 
 
 function setCountryInto(country, flag) {
