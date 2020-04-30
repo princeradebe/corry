@@ -21,7 +21,7 @@ body {
 /*   height: 100vh; */
   /* background: #E7EBF4;
    */
-   background: white;
+  background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +71,7 @@ ul {
   padding-bottom: 2rem;
   background: #FFFFFF;
   border-radius: 2rem;
-  margin: 5rem auto 2rem;
+  margin: 10rem auto 2rem;
   display: flex;
   justify-content: center;
   /* background: #ffffff; */
