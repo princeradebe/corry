@@ -116,6 +116,9 @@ ul {
   color: #2F3340;
   position: relative;
 }
+.covid__wrapper img {
+  width: 30rem;
+}
 .confirmed {
   background: #FFFFFF;
 }
