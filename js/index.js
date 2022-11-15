@@ -22,7 +22,8 @@ let countryName = "South Africa";
 const getCovidSA = async country => {
     try {
         // const fetchCovid19SA = await fetch(`https://covid19.mathdro.id/api/countries/${country}`) - Old API
-        const fetchCovid19SA = await fetch(`https://corona.lmao.ninja/v3/covid-19/countries/${country}`);
+        //const fetchCovid19SA = await fetch(`https://corona.lmao.ninja/v3/covid-19/countries/${country}`) - Old API;
+        const fetchCovid19SA = await fetch(`https://disease.sh/v3/covid-19/countries/${country}`);
         const data = await fetchCovid19SA.json();
 
         spinner.forEach(el => {
