@@ -40,12 +40,15 @@ ul {
 
 .wrapper {
   position: relative;
-  width: 29.7rem;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
 }
 #country-select {
   color: #AEAEAE;
   border-color: #AEAEAE;
-  width: 30rem;
+  width: 100%;
+  max-width: 30rem;
   height: 3rem;
   background-color: white;
   border-radius: .5rem;
@@ -66,7 +69,7 @@ ul {
   color: #AEAEAE;
 }
 .cases-wrapper {
-  width: 29.7rem;
+  width: 100%;
   height: auto;
   padding-bottom: 2rem;
   background: #FFFFFF;
@@ -83,7 +86,7 @@ ul {
   height: 6rem;
 }
 .today__case--wrapper {
-  width: 24.7rem;
+  width: 100%;
   height: 5rem;
   display: flex;
   justify-content: space-between;
@@ -105,7 +108,7 @@ ul {
   -2px -2px 6px #ffffff;
 }
 .cases__list--item {
-  width: 24.7rem;
+  width: 100%;
   height: 7rem;
   border-radius: 1rem;
   margin-top: 1rem;
@@ -117,7 +120,8 @@ ul {
   position: relative;
 }
 .covid__wrapper img {
-  width: 30rem;
+  width: 100%;
+  max-width: 30rem;
 }
 .confirmed {
   background: #FFFFFF;
@@ -146,7 +150,7 @@ ul {
 }
 
 .count-slider {
-  width: 14.8rem;
+  width: 100%;
   height: .7rem;
   background: #FFFFFF;
   border-radius: 10rem;
@@ -196,4 +200,33 @@ footer {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media (min-width: 768px) {
+  .inner-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Or center, depending on desired vertical alignment */
+    gap: 2rem; /* Adds some space between the two flex items */
+  }
+
+  .cases-wrapper {
+    flex-basis: 55%; /* Takes up 55% of the available space */
+    /* The existing 'margin: 10rem auto 2rem;' might need adjustment if .inner-wrapper handles spacing.
+       Let's override the margin for desktop to ensure it fits the flex layout. */
+    margin: 0; 
+  }
+
+  .corona-img {
+    display: block; /* Make it visible */
+    flex-basis: 40%; /* Takes up 40% of the available space */
+    max-width: 300px; /* Or a suitable max-width */
+    align-self: center; /* Example: vertically center the image if it's shorter */
+  }
+  
+  /* Ensure the image inside .corona-img is responsive */
+  .corona-img img {
+    width: 100%;
+    height: auto;
+  }
 }
